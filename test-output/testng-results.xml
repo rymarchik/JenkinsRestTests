@@ -1,26 +1,34 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="1" total="1" passed="0">
+<testng-results skipped="0" failed="1" total="4" passed="3">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="793" started-at="2016-06-14T14:19:56Z" finished-at="2016-06-14T14:19:56Z">
+  <suite name="Default suite" duration-ms="939" started-at="2016-06-16T15:52:56Z" finished-at="2016-06-16T15:52:57Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="793" started-at="2016-06-14T14:19:56Z" finished-at="2016-06-14T14:19:56Z">
-      <class name="com.rymarchik.tests.AppTest">
-        <test-method status="FAIL" signature="test()[pri:0, instance:com.rymarchik.tests.AppTest@20e2cbe0]" name="test" duration-ms="768" started-at="2016-06-14T17:19:56Z" finished-at="2016-06-14T17:19:56Z">
+    <test name="Default test" duration-ms="939" started-at="2016-06-16T15:52:56Z" finished-at="2016-06-16T15:52:57Z">
+      <class name="com.rymarchik.tests.RestAPITests">
+        <test-method status="PASS" signature="createJobTest()[pri:0, instance:com.rymarchik.tests.RestAPITests@480bdb19]" name="createJobTest" duration-ms="487" started-at="2016-06-16T18:52:56Z" finished-at="2016-06-16T18:52:57Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- createJobTest -->
+        <test-method status="PASS" signature="updateJobTest()[pri:0, instance:com.rymarchik.tests.RestAPITests@480bdb19]" name="updateJobTest" duration-ms="126" started-at="2016-06-16T18:52:57Z" finished-at="2016-06-16T18:52:57Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- updateJobTest -->
+        <test-method status="FAIL" signature="copyJobTest()[pri:0, instance:com.rymarchik.tests.RestAPITests@480bdb19]" name="copyJobTest" duration-ms="123" started-at="2016-06-16T18:52:57Z" finished-at="2016-06-16T18:52:57Z">
           <exception class="java.lang.AssertionError">
             <message>
-              <![CDATA[expected [200] but found [403]]]>
+              <![CDATA[expected [403] but found [400]]]>
             </message>
             <full-stacktrace>
-              <![CDATA[java.lang.AssertionError: expected [200] but found [403]
+              <![CDATA[java.lang.AssertionError: expected [403] but found [400]
 	at org.testng.Assert.fail(Assert.java:94)
 	at org.testng.Assert.failNotEquals(Assert.java:513)
 	at org.testng.Assert.assertEqualsImpl(Assert.java:135)
 	at org.testng.Assert.assertEquals(Assert.java:116)
 	at org.testng.Assert.assertEquals(Assert.java:389)
 	at org.testng.Assert.assertEquals(Assert.java:399)
-	at com.rymarchik.tests.AppTest.test(AppTest.java:45)
+	at com.rymarchik.tests.RestAPITests.copyJobTest(RestAPITests.java:68)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
@@ -50,8 +58,12 @@
           </exception> <!-- java.lang.AssertionError -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- test -->
-      </class> <!-- com.rymarchik.tests.AppTest -->
+        </test-method> <!-- copyJobTest -->
+        <test-method status="PASS" signature="deleteJobTest()[pri:0, instance:com.rymarchik.tests.RestAPITests@480bdb19]" name="deleteJobTest" duration-ms="177" started-at="2016-06-16T18:52:57Z" depends-on-methods="com.rymarchik.tests.RestAPITests.createJobTest" finished-at="2016-06-16T18:52:57Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- deleteJobTest -->
+      </class> <!-- com.rymarchik.tests.RestAPITests -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
