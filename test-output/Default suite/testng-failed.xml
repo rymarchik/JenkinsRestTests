@@ -6,13 +6,4 @@
       <class name="com.rymarchik.tests.RestAPITests"/>
     </classes>
   </test> <!-- Default test -->
-  <test name="Default test(failed)">
-    <classes>
-      <class name="com.rymarchik.tests.RestAPITests">
-        <methods>
-          <include name="copyJobTest"/>
-        </methods>
-      </class> <!-- com.rymarchik.tests.RestAPITests -->
-    </classes>
-  </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
